@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>AngularJS Exercise</title>
+        <script  src="https://code.angularjs.org/1.2.25/angular.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    
+    <body ng-app="demoAng">
+        <div ng-controller="myCntrl" class="container">
+          <h1>Invoice Number</h1>  
+          <h3>Choose any text file</h3>
+            <input type="file" on-read-file="showContent($fileContent)" />
+            <button ng-if = content ng-click="fnConvert()">Click to convert</button>
+            <div style="clear:both"></div>
+            <div style='float:left;width:300px' ng-if="content">
+                <h4>File content is:</h4>
+                <pre>{{ content }}</pre>
+            </div>
+            <div ng-if="outputNumber">
+                <h4>Output:</h4>
+                <pre>{{ outputNumber }}</pre>
+            </div>
+        </div>
+    </body>
+</html>
